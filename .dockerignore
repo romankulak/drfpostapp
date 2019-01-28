@@ -1,0 +1,5 @@
+.git
+.gitignore
+venv/
+node_modules/
+db.sqlite3

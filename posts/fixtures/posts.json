@@ -1,0 +1,50 @@
+[
+    {
+      "model": "posts.post",
+      "pk": 1,
+      "fields": {
+        "title": "title1",
+        "content": "Test Content 1",
+        "owner_id": 1,
+        "created": "2018-06-7T17:00:02Z",
+        "updated": "2018-06-7T17:00:02Z",
+        "liked": [2]
+      }
+    },
+    {
+      "model": "posts.post",
+      "pk": 2,
+      "fields": {
+        "title": "title2",
+        "content": "Test Content 2",
+        "owner_id": 1,
+        "created": "2018-06-7T17:00:02Z",
+        "updated": "2018-06-7T17:00:02Z",
+        "liked": [2]
+      }
+    },
+    {
+      "model": "posts.post",
+      "pk": 3,
+      "fields": {
+        "title": "title3",
+        "content": "Test Content 3",
+        "owner_id": 2,
+        "created": "2018-06-7T17:00:02Z",
+        "updated": "2018-06-7T17:00:02Z",
+        "liked": [1,2]
+      }
+    },
+    {
+      "model": "posts.post",
+      "pk": 4,
+      "fields": {
+        "title": "title4",
+        "content": "Test Content 4",
+        "owner_id": 2,
+        "created": "2018-06-7T17:00:02Z",
+        "updated": "2018-06-7T17:00:02Z",
+        "liked": [1,2]
+      }
+    }
+]

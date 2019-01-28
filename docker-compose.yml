@@ -1,0 +1,34 @@
+version: '3.7'
+
+services:
+  web:
+    container_name: web
+    build:
+      context: .
+      args:
+        DEMO: 1
+    image: webapp:latest
+    command: | 
+      bash -c "python manage.py runserver 0.0.0.0:8000"
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./posts:/app/posts
+      - ./social_net:/app/social_net
+      - ./templates:/app/templates
+      - ./manage.py:/app/manage.py
+    depends_on:
+      - js
+
+  js:
+    container_name: js
+    build:
+      dockerfile: frontend/Dockerfile
+      context: .
+    image: js:latest
+    command: yarn run watch
+    volumes:
+      - ./frontend:/app/frontend
+      - ./posts/static/js:/app/posts/static/js
+      - ./package.json:/app/package.json
+      - ./webpack.config.js:/app/webpack.config.js
